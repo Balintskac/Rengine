@@ -1,0 +1,9 @@
+namespace Rengine
+{
+    [default_interface]
+    runtimeclass meshBase : Windows.UI.Xaml.Controls.Page
+    {
+        meshBase();
+        Int32 MyProperty;
+    }
+}

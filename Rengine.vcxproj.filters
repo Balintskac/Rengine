@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Gameobject">
+      <UniqueIdentifier>{37c90a73-4853-4388-a10f-b32b97d49a99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shader-common">
+      <UniqueIdentifier>{af57cfb0-5d5c-4b58-ae05-04259078b276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GLSL">
+      <UniqueIdentifier>{7c475ae7-f54e-4e0d-8795-e5d943b7ead6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{d4e47838-2dc9-4565-8bd6-00b1571cd286}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rendering">
+      <UniqueIdentifier>{ab3a2f68-5424-48d7-b366-01f6e4d2c68f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Rengine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="engine.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="shader.cpp">
+      <Filter>Source Files\Shader-common</Filter>
+    </ClCompile>
+    <ClCompile Include="debugDepthMap.h">
+      <Filter>Source Files\Gameobject</Filter>
+    </ClCompile>
+    <ClCompile Include="raytrace.vs">
+      <Filter>Source Files\GLSL</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderBuffer.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="meshy.h">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scene.vs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="scene.fs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="material.vs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="material.fs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="plane.vs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="plane.fs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="sky.fs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="sky.vs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="depth.vs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="depth.fs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="quad.vs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="quad.fs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="raytrace.fs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="packages.config" />
+    <None Include="model.vs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+    <None Include="model.fs">
+      <Filter>Source Files\GLSL</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engine.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.hpp">
+      <Filter>Source Files\Shader-common</Filter>
+    </ClInclude>
+    <ClInclude Include="param.hpp">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="cube.hpp">
+      <Filter>Source Files\Gameobject</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.hpp">
+      <Filter>Source Files\Gameobject</Filter>
+    </ClInclude>
+    <ClInclude Include="texture.h">
+      <Filter>Source Files\Gameobject</Filter>
+    </ClInclude>
+    <ClInclude Include="plane.hpp">
+      <Filter>Source Files\Gameobject</Filter>
+    </ClInclude>
+    <ClInclude Include="sky.hpp">
+      <Filter>Source Files\Gameobject</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>Source Files\Gameobject</Filter>
+    </ClInclude>
+    <ClInclude Include="shadowCube.h">
+      <Filter>Source Files\Gameobject</Filter>
+    </ClInclude>
+    <ClInclude Include="ray.h">
+      <Filter>Source Files\Gameobject</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderBuffer.h">
+      <Filter>Source Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
