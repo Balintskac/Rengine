@@ -39,3 +39,39 @@
 
 # debug information files
 *.dwo
+
+build/
+bin/
+bin-int/
+out/
+lib/
+obj/
+
+
+# --- Premake generated files ---
+*.make
+*.workspace
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.xcodeproj/
+*.ninja
+*.ninja_deps
+*.ninja_log
+
+# --- IDE settings ---
+.vscode/
+.vs/
+.idea/
+*.code-workspace
+
+# --- Logs and temporary ---
+*.log
+*.tlog
+*.tmp
+*.cache
+*.pch
+*.pdb
+*.user
+*.suo
