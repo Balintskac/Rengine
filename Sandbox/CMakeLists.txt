@@ -12,4 +12,10 @@ add_executable(Sandbox ${SANDBOX_SOURCES})
 target_link_libraries(Sandbox PRIVATE Engine)
 
 # Include Engine headers
-target_include_directories(Sandbox PRIVATE "${CMAKE_SOURCE_DIR}/Engine/includes")
+target_include_directories(Sandbox PRIVATE "${CMAKE_SOURCE_DIR}/Engine")
+
+target_link_options(Sandbox PRIVATE -mconsole)
+
+set_target_properties(Sandbox PROPERTIES
+    LINK_FLAGS "-mconsole"
+)

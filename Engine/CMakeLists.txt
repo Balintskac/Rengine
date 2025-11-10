@@ -4,7 +4,7 @@ project(Engine LANGUAGES CXX)
 # Engine/CMakeLists.txt
 
 # Add all .cpp files from src/
-file(GLOB_RECURSE ENGINE_SOURCES "src/*.cpp" "includes/*.h")
+file(GLOB_RECURSE ENGINE_SOURCES  "Core/entryPoint.h" "Application/application.h" "Application/application.cpp" "rengine.h" )
 add_library(Engine STATIC ${ENGINE_SOURCES})
 
 find_package(glm CONFIG REQUIRED)
@@ -30,3 +30,5 @@ target_link_libraries(Engine
         glad::glad
         imgui::imgui
 )
+
+target_compile_definitions(Engine PUBLIC RE_PLATFORM_WINDOWS)
