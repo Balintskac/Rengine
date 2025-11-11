@@ -24,7 +24,7 @@ endif()
 if(NOT EXISTS "${VCPKG_ROOT}/.git")
     message(STATUS "Cloning vcpkg...")
     execute_process(
-        COMMAND git clone --recurse-submodules https://github.com/microsoft/vcpkg.git "${VCPKG_ROOT}"
+        COMMAND git clonehttps://github.com/microsoft/vcpkg.git "${VCPKG_ROOT}"
         WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/vendor"
     )
 endif()
@@ -66,7 +66,7 @@ execute_process(
 )
 
 message(STATUS "Using vcpkg from: ${VCPKG_ROOT}")
-message(STATUS "asd" ${CMAKE_TOOLCHAIN_FILE})
+
 
 # Add engine and sandbox as subprojects
 add_subdirectory(Engine)
@@ -76,4 +76,3 @@ add_subdirectory(Sandbox)
 list(APPEND CMAKE_PREFIX_PATH
     "${CMAKE_CURRENT_SOURCE_DIR}/Vendor/vcpkg/installed/x64-windows/share"
 )
-

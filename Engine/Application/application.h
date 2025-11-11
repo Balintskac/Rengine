@@ -1,4 +1,8 @@
 #pragma once
+#include <iostream>
+#include <memory>
+
+#include "Core/Window/windowManager.h"
 
 namespace Rengine {
 
@@ -11,6 +15,7 @@ namespace Rengine {
 
     private:
         bool m_Running = true;
+        std::unique_ptr<RengineWindow::WindowManager> m_Window;
     };
 
         // To be defined in Sandbox
