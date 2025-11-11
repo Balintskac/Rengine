@@ -4,7 +4,14 @@ project(Engine LANGUAGES CXX)
 # Engine/CMakeLists.txt
 
 # Add all .cpp files from src/
-file(GLOB_RECURSE ENGINE_SOURCES "src/*.cpp" "includes/*.h")
+file(GLOB_RECURSE ENGINE_SOURCES  "Core/entryPoint.h" 
+"Application/application.h" 
+"Application/application.cpp"
+"Core/Window/windowManager.h"
+"Platform/Windows/windowsWindow.h"
+"Platform/Windows/windowsWindow.cpp"
+ "rengine.h" )
+
 add_library(Engine STATIC ${ENGINE_SOURCES})
 
 find_package(glm CONFIG REQUIRED)
@@ -19,6 +26,7 @@ target_include_directories(Engine
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/includes>
         $<INSTALL_INTERFACE:includes>
         ${CMAKE_SOURCE_DIR}/Vendor/vcpkg/installed/x64-windows/include
+        ${CMAKE_CURRENT_SOURCE_DIR} 
 )
 
 target_link_libraries(Engine
@@ -30,3 +38,6 @@ target_link_libraries(Engine
         glad::glad
         imgui::imgui
 )
+
+target_compile_definitions(Engine PUBLIC RE_PLATFORM_WINDOWS)
+

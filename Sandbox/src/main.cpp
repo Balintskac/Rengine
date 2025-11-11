@@ -1,6 +1,16 @@
-#include "engine.h"
+#include "rengine.h"
+#include <iostream>
 
-int main() {
-    Rengine::Init();
-    return 0;
+class SandboxApp : public Rengine::Application {
+public:
+    SandboxApp() {
+        std::cout << "SandboxApp Created!\n";
+    }
+    ~SandboxApp() override {
+        std::cout << "SandboxApp Destroyed!\n";
+    }
+};
+
+Rengine::Application* Rengine::CreateApplication() {
+    return new SandboxApp();
 }
