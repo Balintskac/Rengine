@@ -1,4 +1,7 @@
 # Sandbox/CMakeLists.txt
+cmake_minimum_required(VERSION 3.25)
+project(Sandbox LANGUAGES CXX)
+
 project(Sandbox)
 
 file(GLOB_RECURSE SANDBOX_SOURCES "src/*.cpp")
