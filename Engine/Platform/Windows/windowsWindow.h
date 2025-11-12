@@ -1,15 +1,24 @@
 #include "Core/Window/windowManager.h"
-
+#include "Core/Event/eventDispacther.h"
 #include "glad/glad.h"
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-
-namespace RengineWindow {
+namespace RengineWindow
+{
 
     class WindowsWindow : public RengineWindow::WindowManager {
     public:
-        WindowsWindow(const WindowProps& props) { Init(props); }
+        WindowsWindow(const WindowProps& props) 
+        { 
+            m_Data.Title = props.Title;
+            m_Data.Width = props.Width;
+            m_Data.Height = props.Height;
+            
+            Init(props);
+            setCallBacks();
+        }
+
         virtual ~WindowsWindow() { Shutdown(); }
 
         void OnUpdate() override {
@@ -40,14 +49,16 @@ namespace RengineWindow {
 
     private:
         void Init(const WindowProps& props) {
-            m_Data.Title = props.Title;
-            m_Data.Width = props.Width;
-            m_Data.Height = props.Height;
 
+            
             if (!glfwInit()) {
                 std::cerr << "Failed to initialize GLFW!\n";
                 return;
             }
+
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+            glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
             m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, props.Title.data(), nullptr, nullptr);
             if (!m_Window) {
@@ -68,6 +79,8 @@ namespace RengineWindow {
                       << props.Width << ", " << props.Height << ")\n";
         }
 
+        void setCallBacks();
+
         void Shutdown() {
             glfwDestroyWindow(m_Window);
             glfwTerminate();
@@ -84,5 +97,6 @@ namespace RengineWindow {
         };
 
         WindowData m_Data;
+        EventDispacther g_dispatcher;
     };
 }

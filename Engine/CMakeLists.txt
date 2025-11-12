@@ -14,6 +14,7 @@ file(GLOB_RECURSE ENGINE_SOURCES  "Core/entryPoint.h"
 "Logger/logger.h"
 "Logger/logMessage.h"
 "Logger/ILoggerSink.h"
+"Event/eventDispacther.h"
  "rengine.h" )
 
 add_library(Engine STATIC ${ENGINE_SOURCES})
