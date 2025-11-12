@@ -10,6 +10,10 @@ file(GLOB_RECURSE ENGINE_SOURCES  "Core/entryPoint.h"
 "Core/Window/windowManager.h"
 "Platform/Windows/windowsWindow.h"
 "Platform/Windows/windowsWindow.cpp"
+"Logger/consoleSink.h"
+"Logger/logger.h"
+"Logger/logMessage.h"
+"Logger/ILoggerSink.h"
  "rengine.h" )
 
 add_library(Engine STATIC ${ENGINE_SOURCES})
